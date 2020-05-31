@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="action_settings">Refresh</string>
+    <string name="internet_err">Internet connection not available!</string>
+
+    <string name="temperature">Temperature (%s)</string>
+    <string name="last_update">Last Update: (%s)</string>
+    <string name="visibility">%skm</string>
+    <string name="humidity">%s</string>
+    <string name="pressure">%sPa</string>
+    <string name="wind">%sm/s</string>
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+</resources>
