@@ -1,4 +1,4 @@
-# kotlin Weather App Demo
+# Kotlin Weather App Demo
 
 # Features
 - MVVM Architecture 
