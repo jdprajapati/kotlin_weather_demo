@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful && task.result != null) {
                     mLastLocation = task.result
-//                    callTimezoneDetails()
                     callGetWeatherDetails(true)
 
                 } else {
@@ -88,29 +87,6 @@ class MainActivity : AppCompatActivity() {
                     Utils.showToast(getString(R.string.no_location_detected))
                 }
             }
-    }
-
-    private fun callTimezoneDetails() {
-        if (isNetworkAvailable()) {
-            showProgress(true)
-
-            viewModel.callTimezoneDetails(mLastLocation?.latitude.toString(), mLastLocation?.longitude.toString())
-            viewModel.getTimeZoneLiveData().observe(this, Observer {
-                showProgress(false)
-                if (it != null) {
-                    Log.d(TAG, "callTimezoneDetails() called: "+it.countryName)
-
-                    callGetWeatherDetails(true)
-                }
-                else{
-                    Utils.showToast("Data not found!")
-                }
-            })
-        }
-        else{
-            Utils.showToast(getString(R.string.internet_err))
-        }
-
     }
 
     private fun callGetWeatherDetails(isLoader: Boolean) {
@@ -121,7 +97,6 @@ class MainActivity : AppCompatActivity() {
             viewModel.getWeatherLiveData().observe(this, Observer {
                 showProgress(false)
                 if (it != null) {
-                    Log.d(TAG, "callTimezoneDetails() called: "+it.weather.get(0).main)
 
                     binding.tvLastUpdate.text = getString(R.string.last_update, Utils.getDateTime(it.dt))
                     binding.tvPressure.text = getString(R.string.pressure, it.main.pressure.toString())

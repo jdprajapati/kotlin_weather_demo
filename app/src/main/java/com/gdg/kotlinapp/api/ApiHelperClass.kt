@@ -13,7 +13,7 @@ class ApiHelperClass {
 
         private var instance: ApiCallInterface? = null
         private var apiCallInterface: ApiCallInterface? = null
-        private var BASE_URL: String? = "https://api.timezonedb.com"
+        private var BASE_URL: String? = "https://api.openweathermap.org/data/2.5/"
 
         fun getInstance(): ApiCallInterface {
             val timeOut: Long = 30 * 1000

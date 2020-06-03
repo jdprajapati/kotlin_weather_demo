@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.os.Vibrator
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class WeatherApplication : Application() {
 
