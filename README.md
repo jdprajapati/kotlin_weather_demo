@@ -2,7 +2,9 @@
 Weather Application developed in Kotlin Programming Language to use of check the user's current location weather status.
 
 ## Sreenshots
-| ![](screenshot#1.png)|
+|  |  |   |
+| :---:                              | :---:                             | :---:                              |
+| ![](screenshot#1.png)  |
 
 
 # Features
